@@ -419,6 +419,12 @@
     [data-platform-content] {
       transition: opacity 0.25s ease, transform 0.25s ease;
     }
+
+    /* Form select option styling */
+    #contact-platform option {
+      background: #0a0e17;
+      color: #e2e5eb;
+    }
   </style>
 </head>
 <body class="font-sans antialiased bg-navy-900 bg-coin-texture min-h-screen">
@@ -446,13 +452,13 @@
           <a href="#features" class="text-sm font-medium text-silver-400 hover:text-gold-300 transition-colors">Features</a>
           <a href="#how-it-works" class="text-sm font-medium text-silver-400 hover:text-gold-300 transition-colors">How it Works</a>
           <a href="#collection" class="text-sm font-medium text-silver-400 hover:text-gold-300 transition-colors">Collection</a>
-          <a href="#download" class="text-sm font-medium text-silver-400 hover:text-gold-300 transition-colors">Download</a>
+          <a href="#beta" class="text-sm font-medium text-silver-400 hover:text-gold-300 transition-colors">Beta Access</a>
         </div>
 
         <!-- CTA + mobile toggle -->
         <div class="flex items-center gap-3">
-          <a href="#download" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-gold-500 to-gold-600 text-navy-900 text-sm font-semibold hover:from-gold-400 hover:to-gold-500 transition-all shadow-glow-gold hover:shadow-glow-gold-lg">
-            Get the App
+          <a href="#beta" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-gold-500 to-gold-600 text-navy-900 text-sm font-semibold hover:from-gold-400 hover:to-gold-500 transition-all shadow-glow-gold hover:shadow-glow-gold-lg">
+            Join Beta
           </a>
           <button id="menu-toggle" class="md:hidden p-2 rounded-lg text-silver-300 hover:bg-navy-700 transition-colors" aria-label="Toggle menu">
             <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -471,9 +477,9 @@
           <a href="#features" class="mobile-nav-link px-3 py-2.5 rounded-lg text-sm font-medium text-silver-300 hover:bg-navy-700 hover:text-gold-300 transition-colors">Features</a>
           <a href="#how-it-works" class="mobile-nav-link px-3 py-2.5 rounded-lg text-sm font-medium text-silver-300 hover:bg-navy-700 hover:text-gold-300 transition-colors">How it Works</a>
           <a href="#collection" class="mobile-nav-link px-3 py-2.5 rounded-lg text-sm font-medium text-silver-300 hover:bg-navy-700 hover:text-gold-300 transition-colors">Collection</a>
-          <a href="#download" class="mobile-nav-link px-3 py-2.5 rounded-lg text-sm font-medium text-silver-300 hover:bg-navy-700 hover:text-gold-300 transition-colors">Download</a>
-          <a href="#download" class="mobile-nav-link mt-2 mx-3 inline-flex justify-center items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-gold-500 to-gold-600 text-navy-900 text-sm font-semibold">
-            Get the App
+          <a href="#beta" class="mobile-nav-link px-3 py-2.5 rounded-lg text-sm font-medium text-silver-300 hover:bg-navy-700 hover:text-gold-300 transition-colors">Beta Access</a>
+          <a href="#beta" class="mobile-nav-link mt-2 mx-3 inline-flex justify-center items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-gold-500 to-gold-600 text-navy-900 text-sm font-semibold">
+            Join Beta
           </a>
         </div>
       </div>
@@ -492,7 +498,7 @@
         <div class="text-center lg:text-left">
           <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-gold-500/25 bg-gold-500/5 text-gold-400 text-xs font-semibold tracking-wide uppercase mb-6 reveal">
             <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7-6.3-4.6L5.7 21l2.3-7-6-4.6h7.6z"/></svg>
-            AI Coin Identification
+            Now in Beta Testing
           </div>
 
           <h1 class="font-display text-4xl sm:text-5xl lg:text-[3.5rem] font-bold leading-[1.1] tracking-tight text-silver-100 mb-5 reveal reveal-delay-1">
@@ -519,31 +525,17 @@
               </button>
             </div>
 
-            <!-- Store badges (hero) -->
-            <div class="flex items-center gap-3" id="hero-badges">
-              <!-- iOS badge (default) -->
-              <a href="#download" class="store-badge platform-ios" data-platform-content="ios">
-                <svg class="w-7 h-7 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-                <div>
-                  <div class="badge-label">Download on the</div>
-                  <div class="badge-store">App Store</div>
-                </div>
-              </a>
-              <!-- Android badge (hidden by default) -->
-              <a href="#download" class="store-badge platform-android hidden" data-platform-content="android">
-                <svg class="w-7 h-7 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.67c.2.14.46.2.71.14l5.4-1.47-6.1-6.1-.14 5.4c-.05.28.03.56.13 1.03zm.8-9.67l5.58 5.58 8.12-3.55L12.56 9.5 3.98 14zM14.3 7.76l-2.12 2.12 6.85 6.85 3.2-1.4c.55-.24.55-1.02 0-1.26L14.3 7.76zM4.4 5.9l-.14 5.4 6.1-6.1L4.97 3.73c-.25-.07-.51 0-.71.14C4.03 4.08 3.95 4.36 4 4.64l.4 1.26z"/></svg>
-                <div>
-                  <div class="badge-label">Get it on</div>
-                  <div class="badge-store">Google Play</div>
-                </div>
-              </a>
-            </div>
+            <!-- Beta CTA (hero) -->
+            <a href="#beta" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-gold-500 to-gold-600 text-navy-900 text-sm font-semibold hover:from-gold-400 hover:to-gold-500 transition-all shadow-glow-gold hover:shadow-glow-gold-lg">
+              Request Beta Access
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
           </div>
 
           <p class="mt-5 text-xs text-silver-500 reveal reveal-delay-4">
             <span class="inline-flex items-center gap-1.5">
-              <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
-              Free Gemini identification · Upgrade anytime
+              <span class="w-1.5 h-1.5 rounded-full bg-gold-400 animate-pulse"></span>
+              iOS &amp; Android · Invite-only beta · Contact us to join
             </span>
           </p>
         </div>
@@ -953,8 +945,8 @@
               <span class="text-sm text-silver-300">Full export and share when you need your data elsewhere</span>
             </li>
           </ul>
-          <a href="#download" class="inline-flex items-center gap-2 text-gold-400 font-semibold text-sm hover:text-gold-300 transition-colors group">
-            Start your album free
+          <a href="#beta" class="inline-flex items-center gap-2 text-gold-400 font-semibold text-sm hover:text-gold-300 transition-colors group">
+            Request beta access
             <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
           </a>
         </div>
@@ -979,63 +971,148 @@
     </div>
   </section>
 
-  <!-- ========== FINAL CTA ========== -->
-  <section id="download" class="py-20 sm:py-28 relative">
+  <!-- ========== BETA ACCESS / CONTACT ========== -->
+  <section id="beta" class="py-20 sm:py-28 relative">
     <div class="section-divider absolute top-0 left-0 right-0"></div>
     <!-- Ambient -->
     <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-gold-500/5 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
 
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center relative z-10">
-      <div class="reveal">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 relative z-10">
+      <div class="text-center mb-10 reveal">
         <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-gold-400 to-gold-700 shadow-glow-gold mb-6 animate-pulse-soft">
           <svg class="w-8 h-8 text-navy-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="12" cy="12" r="9" />
             <circle cx="12" cy="12" r="5" stroke-dasharray="2 1.5" />
           </svg>
         </div>
+        <p class="text-gold-500 text-sm font-semibold tracking-widest uppercase mb-3">Beta Testing</p>
         <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-silver-100 mb-4">
-          Ready to identify your next find?
+          Apps are currently in beta
         </h2>
-        <p class="text-silver-400 text-base sm:text-lg mb-8 max-w-xl mx-auto">
-          Free Gemini identification out of the box. Upgrade when you need Pro power.
-          Your collection journal starts with the first coin.
+        <p class="text-silver-400 text-base sm:text-lg max-w-xl mx-auto mb-4">
+          Snap a Coin for iOS and Android is invite-only while we refine identification quality and the collection journal.
+          Request access below and we’ll add you to the testing program.
         </p>
+        <p class="text-sm text-silver-500">
+          Prefer email?
+          <a href="mailto:admin@snapcollectibles.com?subject=Beta%20Access%20Request" class="text-gold-400 font-medium hover:text-gold-300 transition-colors">admin@snapcollectibles.com</a>
+        </p>
+      </div>
 
-        <!-- Platform toggle (CTA) -->
-        <div class="flex justify-center mb-6">
-          <div class="platform-toggle" role="group" aria-label="Choose platform">
-            <button type="button" class="platform-btn active" data-platform="ios" aria-pressed="true">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-              iOS
-            </button>
-            <button type="button" class="platform-btn" data-platform="android" aria-pressed="false">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24a11.43 11.43 0 0 0-8.94 0L5.65 5.67c-.19-.28-.54-.37-.83-.22-.3.16-.42.54-.26.85l1.84 3.18C4.16 11.25 2.5 14.26 2.5 17.7h19c0-3.44-1.66-6.45-3.9-8.22M7.5 15.5c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1m9 0c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1"/></svg>
-              Android
-            </button>
+      <!-- Contact form -->
+      <div class="reveal reveal-delay-1">
+        <form id="beta-form" class="rounded-2xl border border-gold-500/15 bg-gradient-to-b from-navy-800/80 to-navy-850/90 p-6 sm:p-8 shadow-glow-gold" novalidate>
+          <div class="grid sm:grid-cols-2 gap-5 mb-5">
+            <div>
+              <label for="contact-name" class="block text-sm font-medium text-silver-300 mb-1.5">
+                Full name <span class="text-gold-500">*</span>
+              </label>
+              <input
+                type="text"
+                id="contact-name"
+                name="name"
+                required
+                autocomplete="name"
+                placeholder="Jane Collector"
+                class="w-full rounded-xl border border-gold-500/15 bg-navy-900/80 px-4 py-3 text-sm text-silver-100 placeholder:text-silver-500 focus:outline-none focus:border-gold-500/50 focus:ring-1 focus:ring-gold-500/30 transition-colors"
+              />
+            </div>
+            <div>
+              <label for="contact-email" class="block text-sm font-medium text-silver-300 mb-1.5">
+                Email <span class="text-gold-500">*</span>
+              </label>
+              <input
+                type="email"
+                id="contact-email"
+                name="email"
+                required
+                autocomplete="email"
+                placeholder="you@example.com"
+                class="w-full rounded-xl border border-gold-500/15 bg-navy-900/80 px-4 py-3 text-sm text-silver-100 placeholder:text-silver-500 focus:outline-none focus:border-gold-500/50 focus:ring-1 focus:ring-gold-500/30 transition-colors"
+              />
+            </div>
           </div>
-        </div>
 
-        <!-- Store badges (CTA) -->
-        <div class="flex flex-wrap items-center justify-center gap-3 mb-4" id="cta-badges">
-          <a href="#" class="store-badge platform-ios" data-platform-content="ios" aria-label="Download on the App Store">
-            <svg class="w-8 h-8 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-            <div class="text-left">
-              <div class="badge-label">Download on the</div>
-              <div class="badge-store">App Store</div>
+          <div class="grid sm:grid-cols-2 gap-5 mb-5">
+            <div>
+              <label for="contact-phone" class="block text-sm font-medium text-silver-300 mb-1.5">
+                Phone <span class="text-silver-500 font-normal">(optional)</span>
+              </label>
+              <input
+                type="tel"
+                id="contact-phone"
+                name="phone"
+                autocomplete="tel"
+                placeholder="+1 (555) 000-0000"
+                class="w-full rounded-xl border border-gold-500/15 bg-navy-900/80 px-4 py-3 text-sm text-silver-100 placeholder:text-silver-500 focus:outline-none focus:border-gold-500/50 focus:ring-1 focus:ring-gold-500/30 transition-colors"
+              />
             </div>
-          </a>
-          <a href="#" class="store-badge platform-android hidden" data-platform-content="android" aria-label="Get it on Google Play">
-            <svg class="w-8 h-8 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
-            <div class="text-left">
-              <div class="badge-label">Get it on</div>
-              <div class="badge-store">Google Play</div>
+            <div>
+              <label for="contact-platform" class="block text-sm font-medium text-silver-300 mb-1.5">
+                Preferred platform <span class="text-gold-500">*</span>
+              </label>
+              <select
+                id="contact-platform"
+                name="platform"
+                required
+                class="w-full rounded-xl border border-gold-500/15 bg-navy-900/80 px-4 py-3 text-sm text-silver-100 focus:outline-none focus:border-gold-500/50 focus:ring-1 focus:ring-gold-500/30 transition-colors appearance-none cursor-pointer"
+                style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%239aa3b2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E&quot;); background-repeat: no-repeat; background-position: right 0.75rem center; background-size: 1.25rem;"
+              >
+                <option value="" disabled selected>Select platform…</option>
+                <option value="iOS">iOS (iPhone / iPad)</option>
+                <option value="Android">Android</option>
+                <option value="Both">Both iOS &amp; Android</option>
+              </select>
             </div>
-          </a>
-        </div>
+          </div>
 
-        <p class="text-xs text-silver-500">
-          Available for <span data-platform-label class="text-silver-400 font-medium">iOS</span> · Free to start
-        </p>
+          <div class="mb-5">
+            <label for="contact-device" class="block text-sm font-medium text-silver-300 mb-1.5">
+              Device / OS version <span class="text-silver-500 font-normal">(optional)</span>
+            </label>
+            <input
+              type="text"
+              id="contact-device"
+              name="device"
+              placeholder="e.g. iPhone 15 · iOS 18, or Pixel 8 · Android 15"
+              class="w-full rounded-xl border border-gold-500/15 bg-navy-900/80 px-4 py-3 text-sm text-silver-100 placeholder:text-silver-500 focus:outline-none focus:border-gold-500/50 focus:ring-1 focus:ring-gold-500/30 transition-colors"
+            />
+          </div>
+
+          <div class="mb-6">
+            <label for="contact-details" class="block text-sm font-medium text-silver-300 mb-1.5">
+              Details <span class="text-gold-500">*</span>
+            </label>
+            <textarea
+              id="contact-details"
+              name="details"
+              required
+              rows="4"
+              placeholder="Tell us about your collecting interests, how you’d use the app, or anything else that helps us prioritize testers…"
+              class="w-full rounded-xl border border-gold-500/15 bg-navy-900/80 px-4 py-3 text-sm text-silver-100 placeholder:text-silver-500 focus:outline-none focus:border-gold-500/50 focus:ring-1 focus:ring-gold-500/30 transition-colors resize-y min-h-[110px]"
+            ></textarea>
+          </div>
+
+          <div id="form-error" class="hidden mb-4 rounded-xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-300" role="alert"></div>
+          <div id="form-success" class="hidden mb-4 rounded-xl border border-green-500/30 bg-green-500/10 px-4 py-3 text-sm text-green-300" role="status"></div>
+
+          <button
+            type="submit"
+            id="beta-submit"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-gradient-to-r from-gold-500 to-gold-600 text-navy-900 text-sm font-semibold hover:from-gold-400 hover:to-gold-500 transition-all shadow-glow-gold hover:shadow-glow-gold-lg"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            Request Beta Access
+          </button>
+
+          <p class="mt-4 text-xs text-silver-500 leading-relaxed">
+            Submitting opens your email app with a pre-filled message to
+            <span class="text-silver-400">admin@snapcollectibles.com</span>.
+            We’ll reply when we can add you to the beta.
+          </p>
+        </form>
       </div>
     </div>
   </section>
@@ -1058,7 +1135,8 @@
           <a href="#features" class="hover:text-gold-400 transition-colors">Features</a>
           <a href="#how-it-works" class="hover:text-gold-400 transition-colors">How it Works</a>
           <a href="#collection" class="hover:text-gold-400 transition-colors">Collection</a>
-          <a href="#download" class="hover:text-gold-400 transition-colors">Download</a>
+          <a href="#beta" class="hover:text-gold-400 transition-colors">Beta Access</a>
+          <a href="mailto:admin@snapcollectibles.com" class="hover:text-gold-400 transition-colors">Contact</a>
         </nav>
 
         <p class="text-xs text-silver-500 text-center sm:text-right">
@@ -1198,6 +1276,78 @@
           window.scrollTo({ top: top, behavior: 'smooth' });
         });
       });
+
+      // —— Beta access contact form (mailto) ——
+      var betaForm = document.getElementById('beta-form');
+      if (betaForm) {
+        var formError = document.getElementById('form-error');
+        var formSuccess = document.getElementById('form-success');
+
+        function showFormError(msg) {
+          if (formError) {
+            formError.textContent = msg;
+            formError.classList.remove('hidden');
+          }
+          if (formSuccess) formSuccess.classList.add('hidden');
+        }
+
+        function showFormSuccess(msg) {
+          if (formSuccess) {
+            formSuccess.textContent = msg;
+            formSuccess.classList.remove('hidden');
+          }
+          if (formError) formError.classList.add('hidden');
+        }
+
+        betaForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+
+          var name = (document.getElementById('contact-name').value || '').trim();
+          var email = (document.getElementById('contact-email').value || '').trim();
+          var phone = (document.getElementById('contact-phone').value || '').trim();
+          var platform = (document.getElementById('contact-platform').value || '').trim();
+          var device = (document.getElementById('contact-device').value || '').trim();
+          var details = (document.getElementById('contact-details').value || '').trim();
+
+          if (!name || !email || !platform || !details) {
+            showFormError('Please fill in all required fields (name, email, platform, and details).');
+            return;
+          }
+
+          if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            showFormError('Please enter a valid email address.');
+            return;
+          }
+
+          var subject = 'Beta Access Request — ' + name + ' (' + platform + ')';
+          var body = [
+            'Beta access request from the Snap a Coin website',
+            '',
+            '—— Contact Info ——',
+            'Name: ' + name,
+            'Email: ' + email,
+            'Phone: ' + (phone || '(not provided)'),
+            '',
+            '—— Details ——',
+            'Preferred platform: ' + platform,
+            'Device / OS: ' + (device || '(not provided)'),
+            '',
+            'Message:',
+            details,
+            '',
+            '——',
+            'Sent via snapcollectibles.com beta form'
+          ].join('\n');
+
+          var mailto =
+            'mailto:admin@snapcollectibles.com' +
+            '?subject=' + encodeURIComponent(subject) +
+            '&body=' + encodeURIComponent(body);
+
+          window.location.href = mailto;
+          showFormSuccess('Opening your email app… If nothing opens, email admin@snapcollectibles.com directly with your request.');
+        });
+      }
     })();
   </script>
 </body>
